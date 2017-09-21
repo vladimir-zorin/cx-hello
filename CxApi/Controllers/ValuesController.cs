@@ -18,9 +18,9 @@ namespace CxApi.Controllers
 
         // GET api/hello/name
         [HttpGet("{name}")]
-        public string Get(string name)
+        public JsonResult Get(string name)
         {
-            return "Hello " + name;
+            return Json(new { res = "Hello " + name});
         }
     }
 }
